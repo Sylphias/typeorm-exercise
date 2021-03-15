@@ -1,0 +1,18 @@
+{
+   "dependencies": {
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "ts-node-dev": "^1.1.6",
+      "typeorm": "0.2.31",
+      "typeorm-seeding": "^1.6.1"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "migration:generate": "ts-node-dev ./node_modules/typeorm/cli.js migration:generate -n"
+   }
+}
