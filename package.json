@@ -1,5 +1,6 @@
 {
    "dependencies": {
+      "faker": "^5.4.0",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.10",
       "ts-node-dev": "^1.1.6",
@@ -7,12 +8,15 @@
       "typeorm-seeding": "^1.6.1"
    },
    "devDependencies": {
+      "@types/faker": "^5.1.7",
       "@types/node": "^8.0.29",
       "ts-node": "3.3.0",
       "typescript": "3.3.3333"
    },
    "scripts": {
       "start": "ts-node src/index.ts",
-      "migration:generate": "ts-node-dev ./node_modules/typeorm/cli.js migration:generate -n"
+      "migration:generate": "ts-node-dev ./node_modules/typeorm/cli.js migration:generate -n",
+      "migration:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run",
+      "seed:run": "ts-node-dev ./node_modules/typeorm-seeding/dist/cli.js seed -s CreateDefaultSeed"
    }
 }
