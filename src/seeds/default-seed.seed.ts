@@ -1,4 +1,3 @@
-// create-pets.seed.ts
 import { Factory, Seeder } from 'typeorm-seeding';
 import { Connection } from 'typeorm';
 import {User} from '../entities/User.entity';
@@ -14,10 +13,6 @@ export default class CreateDefaultSeed implements Seeder {
         project.team = teams[Math.floor(Math.random() * 3)]
         return project
     }).createMany(3)
-
-    console.log(users);
-    console.log(teams);
-    console.log(projects);
 
     }
   }
